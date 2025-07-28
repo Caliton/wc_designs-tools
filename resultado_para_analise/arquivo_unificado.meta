@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<residentTxd>vehshare</residentTxd>
+<residentAnims />
+<InitDatas>
+  <Item>
+    <modelName>WRharrypotterVI</modelName>
+    <txdName>WRharrypotterVI</txdName>
+    <handlingId>WRharrypotterVI</handlingId>
+    <gameName>WRharrypotterVI</gameName>
+    <vehicleMakeName>WRharrypotterVI</vehicleMakeName>
+    <expressionDictName>null</expressionDictName>
+    <expressionName>null</expressionName>
+    <animConvRoofDictName>null</animConvRoofDictName>
+    <animConvRoofName>null</animConvRoofName>
+    <animConvRoofWindowsAffected />
+    <ptfxAssetName>null</ptfxAssetName>
+    <audioNameHash />
+    <layout>LAYOUT_WRBIKE_SPORT</layout>
+    <coverBoundOffsets>BIKE_COVER_OFFSET_INFO</coverBoundOffsets>
+    <POVTuningInfo>AKUMA_POV_TUNING</POVTuningInfo>
+    <explosionInfo>EXPLOSION_INFO_DEFAULT</explosionInfo>
+    <scenarioLayout />
+    <cameraName>FOLLOW_BIKE_CAMERA</cameraName>
+    <aimCameraName>BIKE_AIM_CAMERA</aimCameraName>
+    <bonnetCameraName>BIKE_AKUMA_POV_CAMERA</bonnetCameraName>
+    <povCameraName>BIKE_AKUMA_POV_CAMERA</povCameraName>
+    <FirstPersonDriveByIKOffset x="0.000000" y="-0.060000" z="0.000000">
+
+    </FirstPersonDriveByIKOffset>
+    <FirstPersonDriveByUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByUnarmedIKOffset>
+    <FirstPersonProjectileDriveByIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonProjectileDriveByIKOffset>
+    <FirstPersonProjectileDriveByPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonProjectileDriveByPassengerIKOffset>
+    <FirstPersonDriveByLeftPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByLeftPassengerIKOffset>
+    <FirstPersonDriveByRightPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByRightPassengerIKOffset>
+    <FirstPersonDriveByLeftPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByLeftPassengerUnarmedIKOffset>
+    <FirstPersonDriveByRightPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByRightPassengerUnarmedIKOffset>
+    <FirstPersonMobilePhoneOffset x="0.155000" y="0.315000" z="0.520000">
+
+    </FirstPersonMobilePhoneOffset>
+    <FirstPersonPassengerMobilePhoneOffset x="0.136000" y="0.223000" z="0.425000">
+
+    </FirstPersonPassengerMobilePhoneOffset>
+    <PovCameraOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </PovCameraOffset>
+    <PovCameraVerticalAdjustmentForRollCage value="0.000000">
+
+    </PovCameraVerticalAdjustmentForRollCage>
+    <PovPassengerCameraOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </PovPassengerCameraOffset>
+    <vfxInfoName>VFXVEHICLEINFO_MOTORBIKE_GENERIC</vfxInfoName>
+    <shouldUseCinematicViewMode value="true">
+
+    </shouldUseCinematicViewMode>
+    <shouldCameraTransitionOnClimbUpDown value="false">
+
+    </shouldCameraTransitionOnClimbUpDown>
+    <shouldCameraIgnoreExiting value="false">
+
+    </shouldCameraIgnoreExiting>
+    <AllowPretendOccupants value="false">
+
+    </AllowPretendOccupants>
+    <AllowJoyriding value="true">
+
+    </AllowJoyriding>
+    <AllowSundayDriving value="true">
+
+    </AllowSundayDriving>
+    <AllowBodyColorMapping value="true">
+
+    </AllowBodyColorMapping>
+    <wheelScale value="0.231300">
+
+    </wheelScale>
+    <wheelScaleRear value="0.231300">
+
+    </wheelScaleRear>
+    <dirtLevelMin value="0.000000">
+
+    </dirtLevelMin>
+    <dirtLevelMax value="0.850000">
+
+    </dirtLevelMax>
+    <envEffScaleMin value="0.000000">
+
+    </envEffScaleMin>
+    <envEffScaleMax value="1.000000">
+
+    </envEffScaleMax>
+    <envEffScaleMin2 value="0.000000">
+
+    </envEffScaleMin2>
+    <envEffScaleMax2 value="1.000000">
+
+    </envEffScaleMax2>
+    <damageMapScale value="0.600000">
+
+    </damageMapScale>
+    <damageOffsetScale value="1.000000">
+
+    </damageOffsetScale>
+    <diffuseTint value="0x00FFFFFF">
+
+    </diffuseTint>
+    <steerWheelMult value="0.600000">
+
+    </steerWheelMult>
+    <HDTextureDist value="5.000000">
+
+    </HDTextureDist>
+    <lodDistances content="float_array">
+100.000000
+        100.000000
+        100.000000
+        100.000000
+        500.000000
+        500.000000    </lodDistances>
+    <minSeatHeight value="10">
+
+    </minSeatHeight>
+    <identicalModelSpawnDistance value="80">
+
+    </identicalModelSpawnDistance>
+    <maxNumOfSameColor value="10">
+
+    </maxNumOfSameColor>
+    <defaultBodyHealth value="1000.000000">
+
+    </defaultBodyHealth>
+    <pretendOccupantsScale value="1.000000">
+
+    </pretendOccupantsScale>
+    <visibleSpawnDistScale value="1.000000">
+
+    </visibleSpawnDistScale>
+    <trackerPathWidth value="2.000000">
+
+    </trackerPathWidth>
+    <weaponForceMult value="1.000000">
+
+    </weaponForceMult>
+    <frequency value="20">
+
+    </frequency>
+    <swankness>SWANKNESS_1</swankness>
+    <maxNum value="4">
+
+    </maxNum>
+    <flags>FLAG_NO_BOOT FLAG_IGNORE_ON_SIDE_CHECK FLAG_AVERAGE_CAR
+        FLAG_HEADLIGHTS_USE_ACTUAL_BONE_POS</flags>
+    <type>VEHICLE_TYPE_BIKE</type>
+    <plateType>VPT_BACK_PLATES</plateType>
+    <dashboardType>VDT_SPORTBK</dashboardType>
+    <vehicleClass>VC_MOTORCYCLE</vehicleClass>
+    <wheelType>VWT_BIKE</wheelType>
+    <trailers />
+    <additionalTrailers />
+    <drivers />
+    <extraIncludes>
+      <Item>EXTRA_1 EXTRA_9</Item>
+    </extraIncludes>
+    <doorsWithCollisionWhenClosed />
+    <driveableDoors />
+    <bumpersNeedToCollideWithMap value="false">
+
+    </bumpersNeedToCollideWithMap>
+    <needsRopeTexture value="false">
+
+    </needsRopeTexture>
+    <requiredExtras>EXTRA_6 EXTRA_7 EXTRA_8</requiredExtras>
+    <rewards />
+    <cinematicPartCamera>
+      <Item>WHEEL_REAR_LEFT_CAMERA</Item>
+      <Item>WHEEL_REAR_RIGHT_CAMERA</Item>
+    </cinematicPartCamera>
+    <NmBraceOverrideSet>Bike</NmBraceOverrideSet>
+    <buoyancySphereOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </buoyancySphereOffset>
+    <buoyancySphereSizeScale value="1.000000">
+
+    </buoyancySphereSizeScale>
+    <pOverrideRagdollThreshold type="NULL">
+
+    </pOverrideRagdollThreshold>
+    <firstPersonDrivebyData>
+      <Item>BIKE_AKUMA_FRONT</Item>
+    </firstPersonDrivebyData>
+  </Item>
+  <Item>
+    <modelName>WRharrypotterIII</modelName>
+    <txdName>WRharrypotterIII</txdName>
+    <handlingId>WRharrypotterIII</handlingId>
+    <gameName>WRharrypotterIII</gameName>
+    <vehicleMakeName>WRharrypotterIII</vehicleMakeName>
+    <expressionDictName>null</expressionDictName>
+    <expressionName>null</expressionName>
+    <animConvRoofDictName>null</animConvRoofDictName>
+    <animConvRoofName>null</animConvRoofName>
+    <animConvRoofWindowsAffected />
+    <ptfxAssetName>null</ptfxAssetName>
+    <audioNameHash />
+    <layout>LAYOUT_WRBIKE_SPORT</layout>
+    <coverBoundOffsets>BIKE_COVER_OFFSET_INFO</coverBoundOffsets>
+    <POVTuningInfo>AKUMA_POV_TUNING</POVTuningInfo>
+    <explosionInfo>EXPLOSION_INFO_DEFAULT</explosionInfo>
+    <scenarioLayout />
+    <cameraName>FOLLOW_BIKE_CAMERA</cameraName>
+    <aimCameraName>BIKE_AIM_CAMERA</aimCameraName>
+    <bonnetCameraName>BIKE_AKUMA_POV_CAMERA</bonnetCameraName>
+    <povCameraName>BIKE_AKUMA_POV_CAMERA</povCameraName>
+    <FirstPersonDriveByIKOffset x="0.000000" y="-0.060000" z="0.000000">
+
+    </FirstPersonDriveByIKOffset>
+    <FirstPersonDriveByUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByUnarmedIKOffset>
+    <FirstPersonProjectileDriveByIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonProjectileDriveByIKOffset>
+    <FirstPersonProjectileDriveByPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonProjectileDriveByPassengerIKOffset>
+    <FirstPersonDriveByLeftPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByLeftPassengerIKOffset>
+    <FirstPersonDriveByRightPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByRightPassengerIKOffset>
+    <FirstPersonDriveByLeftPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByLeftPassengerUnarmedIKOffset>
+    <FirstPersonDriveByRightPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByRightPassengerUnarmedIKOffset>
+    <FirstPersonMobilePhoneOffset x="0.155000" y="0.315000" z="0.520000">
+
+    </FirstPersonMobilePhoneOffset>
+    <FirstPersonPassengerMobilePhoneOffset x="0.136000" y="0.223000" z="0.425000">
+
+    </FirstPersonPassengerMobilePhoneOffset>
+    <PovCameraOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </PovCameraOffset>
+    <PovCameraVerticalAdjustmentForRollCage value="0.000000">
+
+    </PovCameraVerticalAdjustmentForRollCage>
+    <PovPassengerCameraOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </PovPassengerCameraOffset>
+    <vfxInfoName>VFXVEHICLEINFO_MOTORBIKE_GENERIC</vfxInfoName>
+    <shouldUseCinematicViewMode value="true">
+
+    </shouldUseCinematicViewMode>
+    <shouldCameraTransitionOnClimbUpDown value="false">
+
+    </shouldCameraTransitionOnClimbUpDown>
+    <shouldCameraIgnoreExiting value="false">
+
+    </shouldCameraIgnoreExiting>
+    <AllowPretendOccupants value="false">
+
+    </AllowPretendOccupants>
+    <AllowJoyriding value="true">
+
+    </AllowJoyriding>
+    <AllowSundayDriving value="true">
+
+    </AllowSundayDriving>
+    <AllowBodyColorMapping value="true">
+
+    </AllowBodyColorMapping>
+    <wheelScale value="0.231300">
+
+    </wheelScale>
+    <wheelScaleRear value="0.231300">
+
+    </wheelScaleRear>
+    <dirtLevelMin value="0.000000">
+
+    </dirtLevelMin>
+    <dirtLevelMax value="0.850000">
+
+    </dirtLevelMax>
+    <envEffScaleMin value="0.000000">
+
+    </envEffScaleMin>
+    <envEffScaleMax value="1.000000">
+
+    </envEffScaleMax>
+    <envEffScaleMin2 value="0.000000">
+
+    </envEffScaleMin2>
+    <envEffScaleMax2 value="1.000000">
+
+    </envEffScaleMax2>
+    <damageMapScale value="0.600000">
+
+    </damageMapScale>
+    <damageOffsetScale value="1.000000">
+
+    </damageOffsetScale>
+    <diffuseTint value="0x00FFFFFF">
+
+    </diffuseTint>
+    <steerWheelMult value="0.600000">
+
+    </steerWheelMult>
+    <HDTextureDist value="5.000000">
+
+    </HDTextureDist>
+    <lodDistances content="float_array">
+100.000000
+        100.000000
+        100.000000
+        100.000000
+        500.000000
+        500.000000    </lodDistances>
+    <minSeatHeight value="10">
+
+    </minSeatHeight>
+    <identicalModelSpawnDistance value="80">
+
+    </identicalModelSpawnDistance>
+    <maxNumOfSameColor value="10">
+
+    </maxNumOfSameColor>
+    <defaultBodyHealth value="1000.000000">
+
+    </defaultBodyHealth>
+    <pretendOccupantsScale value="1.000000">
+
+    </pretendOccupantsScale>
+    <visibleSpawnDistScale value="1.000000">
+
+    </visibleSpawnDistScale>
+    <trackerPathWidth value="2.000000">
+
+    </trackerPathWidth>
+    <weaponForceMult value="1.000000">
+
+    </weaponForceMult>
+    <frequency value="20">
+
+    </frequency>
+    <swankness>SWANKNESS_1</swankness>
+    <maxNum value="4">
+
+    </maxNum>
+    <flags>FLAG_NO_BOOT FLAG_IGNORE_ON_SIDE_CHECK FLAG_AVERAGE_CAR
+        FLAG_HEADLIGHTS_USE_ACTUAL_BONE_POS</flags>
+    <type>VEHICLE_TYPE_BIKE</type>
+    <plateType>VPT_BACK_PLATES</plateType>
+    <dashboardType>VDT_SPORTBK</dashboardType>
+    <vehicleClass>VC_MOTORCYCLE</vehicleClass>
+    <wheelType>VWT_BIKE</wheelType>
+    <trailers />
+    <additionalTrailers />
+    <drivers />
+    <extraIncludes>
+      <Item>EXTRA_1 EXTRA_9</Item>
+    </extraIncludes>
+    <doorsWithCollisionWhenClosed />
+    <driveableDoors />
+    <bumpersNeedToCollideWithMap value="false">
+
+    </bumpersNeedToCollideWithMap>
+    <needsRopeTexture value="false">
+
+    </needsRopeTexture>
+    <requiredExtras>EXTRA_6 EXTRA_7 EXTRA_8</requiredExtras>
+    <rewards />
+    <cinematicPartCamera>
+      <Item>WHEEL_REAR_LEFT_CAMERA</Item>
+      <Item>WHEEL_REAR_RIGHT_CAMERA</Item>
+    </cinematicPartCamera>
+    <NmBraceOverrideSet>Bike</NmBraceOverrideSet>
+    <buoyancySphereOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </buoyancySphereOffset>
+    <buoyancySphereSizeScale value="1.000000">
+
+    </buoyancySphereSizeScale>
+    <pOverrideRagdollThreshold type="NULL">
+
+    </pOverrideRagdollThreshold>
+    <firstPersonDrivebyData>
+      <Item>BIKE_AKUMA_FRONT</Item>
+    </firstPersonDrivebyData>
+  </Item>
+  <Item>
+    <modelName>WRharrypotterII</modelName>
+    <txdName>WRharrypotterII</txdName>
+    <handlingId>WRharrypotterII</handlingId>
+    <gameName>WRharrypotterII</gameName>
+    <vehicleMakeName>WRharrypotterII</vehicleMakeName>
+    <expressionDictName>null</expressionDictName>
+    <expressionName>null</expressionName>
+    <animConvRoofDictName>null</animConvRoofDictName>
+    <animConvRoofName>null</animConvRoofName>
+    <animConvRoofWindowsAffected />
+    <ptfxAssetName>null</ptfxAssetName>
+    <audioNameHash />
+    <layout>LAYOUT_WRBIKE_SPORT</layout>
+    <coverBoundOffsets>BIKE_COVER_OFFSET_INFO</coverBoundOffsets>
+    <POVTuningInfo>AKUMA_POV_TUNING</POVTuningInfo>
+    <explosionInfo>EXPLOSION_INFO_DEFAULT</explosionInfo>
+    <scenarioLayout />
+    <cameraName>FOLLOW_BIKE_CAMERA</cameraName>
+    <aimCameraName>BIKE_AIM_CAMERA</aimCameraName>
+    <bonnetCameraName>BIKE_AKUMA_POV_CAMERA</bonnetCameraName>
+    <povCameraName>BIKE_AKUMA_POV_CAMERA</povCameraName>
+    <FirstPersonDriveByIKOffset x="0.000000" y="-0.060000" z="0.000000">
+
+    </FirstPersonDriveByIKOffset>
+    <FirstPersonDriveByUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByUnarmedIKOffset>
+    <FirstPersonProjectileDriveByIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonProjectileDriveByIKOffset>
+    <FirstPersonProjectileDriveByPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonProjectileDriveByPassengerIKOffset>
+    <FirstPersonDriveByLeftPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByLeftPassengerIKOffset>
+    <FirstPersonDriveByRightPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByRightPassengerIKOffset>
+    <FirstPersonDriveByLeftPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByLeftPassengerUnarmedIKOffset>
+    <FirstPersonDriveByRightPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByRightPassengerUnarmedIKOffset>
+    <FirstPersonMobilePhoneOffset x="0.155000" y="0.315000" z="0.520000">
+
+    </FirstPersonMobilePhoneOffset>
+    <FirstPersonPassengerMobilePhoneOffset x="0.136000" y="0.223000" z="0.425000">
+
+    </FirstPersonPassengerMobilePhoneOffset>
+    <PovCameraOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </PovCameraOffset>
+    <PovCameraVerticalAdjustmentForRollCage value="0.000000">
+
+    </PovCameraVerticalAdjustmentForRollCage>
+    <PovPassengerCameraOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </PovPassengerCameraOffset>
+    <vfxInfoName>VFXVEHICLEINFO_MOTORBIKE_GENERIC</vfxInfoName>
+    <shouldUseCinematicViewMode value="true">
+
+    </shouldUseCinematicViewMode>
+    <shouldCameraTransitionOnClimbUpDown value="false">
+
+    </shouldCameraTransitionOnClimbUpDown>
+    <shouldCameraIgnoreExiting value="false">
+
+    </shouldCameraIgnoreExiting>
+    <AllowPretendOccupants value="false">
+
+    </AllowPretendOccupants>
+    <AllowJoyriding value="true">
+
+    </AllowJoyriding>
+    <AllowSundayDriving value="true">
+
+    </AllowSundayDriving>
+    <AllowBodyColorMapping value="true">
+
+    </AllowBodyColorMapping>
+    <wheelScale value="0.231300">
+
+    </wheelScale>
+    <wheelScaleRear value="0.231300">
+
+    </wheelScaleRear>
+    <dirtLevelMin value="0.000000">
+
+    </dirtLevelMin>
+    <dirtLevelMax value="0.850000">
+
+    </dirtLevelMax>
+    <envEffScaleMin value="0.000000">
+
+    </envEffScaleMin>
+    <envEffScaleMax value="1.000000">
+
+    </envEffScaleMax>
+    <envEffScaleMin2 value="0.000000">
+
+    </envEffScaleMin2>
+    <envEffScaleMax2 value="1.000000">
+
+    </envEffScaleMax2>
+    <damageMapScale value="0.600000">
+
+    </damageMapScale>
+    <damageOffsetScale value="1.000000">
+
+    </damageOffsetScale>
+    <diffuseTint value="0x00FFFFFF">
+
+    </diffuseTint>
+    <steerWheelMult value="0.600000">
+
+    </steerWheelMult>
+    <HDTextureDist value="5.000000">
+
+    </HDTextureDist>
+    <lodDistances content="float_array">
+100.000000
+        100.000000
+        100.000000
+        100.000000
+        500.000000
+        500.000000    </lodDistances>
+    <minSeatHeight value="10">
+
+    </minSeatHeight>
+    <identicalModelSpawnDistance value="80">
+
+    </identicalModelSpawnDistance>
+    <maxNumOfSameColor value="10">
+
+    </maxNumOfSameColor>
+    <defaultBodyHealth value="1000.000000">
+
+    </defaultBodyHealth>
+    <pretendOccupantsScale value="1.000000">
+
+    </pretendOccupantsScale>
+    <visibleSpawnDistScale value="1.000000">
+
+    </visibleSpawnDistScale>
+    <trackerPathWidth value="2.000000">
+
+    </trackerPathWidth>
+    <weaponForceMult value="1.000000">
+
+    </weaponForceMult>
+    <frequency value="20">
+
+    </frequency>
+    <swankness>SWANKNESS_1</swankness>
+    <maxNum value="4">
+
+    </maxNum>
+    <flags>FLAG_NO_BOOT FLAG_IGNORE_ON_SIDE_CHECK FLAG_AVERAGE_CAR
+        FLAG_HEADLIGHTS_USE_ACTUAL_BONE_POS</flags>
+    <type>VEHICLE_TYPE_BIKE</type>
+    <plateType>VPT_BACK_PLATES</plateType>
+    <dashboardType>VDT_SPORTBK</dashboardType>
+    <vehicleClass>VC_MOTORCYCLE</vehicleClass>
+    <wheelType>VWT_BIKE</wheelType>
+    <trailers />
+    <additionalTrailers />
+    <drivers />
+    <extraIncludes>
+      <Item>EXTRA_1 EXTRA_9</Item>
+    </extraIncludes>
+    <doorsWithCollisionWhenClosed />
+    <driveableDoors />
+    <bumpersNeedToCollideWithMap value="false">
+
+    </bumpersNeedToCollideWithMap>
+    <needsRopeTexture value="false">
+
+    </needsRopeTexture>
+    <requiredExtras>EXTRA_6 EXTRA_7 EXTRA_8</requiredExtras>
+    <rewards />
+    <cinematicPartCamera>
+      <Item>WHEEL_REAR_LEFT_CAMERA</Item>
+      <Item>WHEEL_REAR_RIGHT_CAMERA</Item>
+    </cinematicPartCamera>
+    <NmBraceOverrideSet>Bike</NmBraceOverrideSet>
+    <buoyancySphereOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </buoyancySphereOffset>
+    <buoyancySphereSizeScale value="1.000000">
+
+    </buoyancySphereSizeScale>
+    <pOverrideRagdollThreshold type="NULL">
+
+    </pOverrideRagdollThreshold>
+    <firstPersonDrivebyData>
+      <Item>BIKE_AKUMA_FRONT</Item>
+    </firstPersonDrivebyData>
+  </Item>
+  <Item>
+    <modelName>WRharrypotterI</modelName>
+    <txdName>WRharrypotterI</txdName>
+    <handlingId>WRharrypotterI</handlingId>
+    <gameName>WRharrypotterI</gameName>
+    <vehicleMakeName>WRharrypotterI</vehicleMakeName>
+    <expressionDictName>null</expressionDictName>
+    <expressionName>null</expressionName>
+    <animConvRoofDictName>null</animConvRoofDictName>
+    <animConvRoofName>null</animConvRoofName>
+    <animConvRoofWindowsAffected />
+    <ptfxAssetName>null</ptfxAssetName>
+    <audioNameHash />
+    <layout>LAYOUT_WRBIKE_SPORT</layout>
+    <coverBoundOffsets>BIKE_COVER_OFFSET_INFO</coverBoundOffsets>
+    <POVTuningInfo>AKUMA_POV_TUNING</POVTuningInfo>
+    <explosionInfo>EXPLOSION_INFO_DEFAULT</explosionInfo>
+    <scenarioLayout />
+    <cameraName>FOLLOW_BIKE_CAMERA</cameraName>
+    <aimCameraName>BIKE_AIM_CAMERA</aimCameraName>
+    <bonnetCameraName>BIKE_AKUMA_POV_CAMERA</bonnetCameraName>
+    <povCameraName>BIKE_AKUMA_POV_CAMERA</povCameraName>
+    <FirstPersonDriveByIKOffset x="0.000000" y="-0.060000" z="0.000000">
+
+    </FirstPersonDriveByIKOffset>
+    <FirstPersonDriveByUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByUnarmedIKOffset>
+    <FirstPersonProjectileDriveByIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonProjectileDriveByIKOffset>
+    <FirstPersonProjectileDriveByPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonProjectileDriveByPassengerIKOffset>
+    <FirstPersonDriveByLeftPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByLeftPassengerIKOffset>
+    <FirstPersonDriveByRightPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByRightPassengerIKOffset>
+    <FirstPersonDriveByLeftPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByLeftPassengerUnarmedIKOffset>
+    <FirstPersonDriveByRightPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByRightPassengerUnarmedIKOffset>
+    <FirstPersonMobilePhoneOffset x="0.155000" y="0.315000" z="0.520000">
+
+    </FirstPersonMobilePhoneOffset>
+    <FirstPersonPassengerMobilePhoneOffset x="0.136000" y="0.223000" z="0.425000">
+
+    </FirstPersonPassengerMobilePhoneOffset>
+    <PovCameraOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </PovCameraOffset>
+    <PovCameraVerticalAdjustmentForRollCage value="0.000000">
+
+    </PovCameraVerticalAdjustmentForRollCage>
+    <PovPassengerCameraOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </PovPassengerCameraOffset>
+    <vfxInfoName>VFXVEHICLEINFO_MOTORBIKE_GENERIC</vfxInfoName>
+    <shouldUseCinematicViewMode value="true">
+
+    </shouldUseCinematicViewMode>
+    <shouldCameraTransitionOnClimbUpDown value="false">
+
+    </shouldCameraTransitionOnClimbUpDown>
+    <shouldCameraIgnoreExiting value="false">
+
+    </shouldCameraIgnoreExiting>
+    <AllowPretendOccupants value="false">
+
+    </AllowPretendOccupants>
+    <AllowJoyriding value="true">
+
+    </AllowJoyriding>
+    <AllowSundayDriving value="true">
+
+    </AllowSundayDriving>
+    <AllowBodyColorMapping value="true">
+
+    </AllowBodyColorMapping>
+    <wheelScale value="0.231300">
+
+    </wheelScale>
+    <wheelScaleRear value="0.231300">
+
+    </wheelScaleRear>
+    <dirtLevelMin value="0.000000">
+
+    </dirtLevelMin>
+    <dirtLevelMax value="0.850000">
+
+    </dirtLevelMax>
+    <envEffScaleMin value="0.000000">
+
+    </envEffScaleMin>
+    <envEffScaleMax value="1.000000">
+
+    </envEffScaleMax>
+    <envEffScaleMin2 value="0.000000">
+
+    </envEffScaleMin2>
+    <envEffScaleMax2 value="1.000000">
+
+    </envEffScaleMax2>
+    <damageMapScale value="0.600000">
+
+    </damageMapScale>
+    <damageOffsetScale value="1.000000">
+
+    </damageOffsetScale>
+    <diffuseTint value="0x00FFFFFF">
+
+    </diffuseTint>
+    <steerWheelMult value="0.600000">
+
+    </steerWheelMult>
+    <HDTextureDist value="5.000000">
+
+    </HDTextureDist>
+    <lodDistances content="float_array">
+100.000000
+        100.000000
+        100.000000
+        100.000000
+        500.000000
+        500.000000    </lodDistances>
+    <minSeatHeight value="10">
+
+    </minSeatHeight>
+    <identicalModelSpawnDistance value="80">
+
+    </identicalModelSpawnDistance>
+    <maxNumOfSameColor value="10">
+
+    </maxNumOfSameColor>
+    <defaultBodyHealth value="1000.000000">
+
+    </defaultBodyHealth>
+    <pretendOccupantsScale value="1.000000">
+
+    </pretendOccupantsScale>
+    <visibleSpawnDistScale value="1.000000">
+
+    </visibleSpawnDistScale>
+    <trackerPathWidth value="2.000000">
+
+    </trackerPathWidth>
+    <weaponForceMult value="1.000000">
+
+    </weaponForceMult>
+    <frequency value="20">
+
+    </frequency>
+    <swankness>SWANKNESS_1</swankness>
+    <maxNum value="4">
+
+    </maxNum>
+    <flags>FLAG_NO_BOOT FLAG_IGNORE_ON_SIDE_CHECK FLAG_AVERAGE_CAR
+        FLAG_HEADLIGHTS_USE_ACTUAL_BONE_POS</flags>
+    <type>VEHICLE_TYPE_BIKE</type>
+    <plateType>VPT_BACK_PLATES</plateType>
+    <dashboardType>VDT_SPORTBK</dashboardType>
+    <vehicleClass>VC_MOTORCYCLE</vehicleClass>
+    <wheelType>VWT_BIKE</wheelType>
+    <trailers />
+    <additionalTrailers />
+    <drivers />
+    <extraIncludes>
+      <Item>EXTRA_1 EXTRA_9</Item>
+    </extraIncludes>
+    <doorsWithCollisionWhenClosed />
+    <driveableDoors />
+    <bumpersNeedToCollideWithMap value="false">
+
+    </bumpersNeedToCollideWithMap>
+    <needsRopeTexture value="false">
+
+    </needsRopeTexture>
+    <requiredExtras>EXTRA_6 EXTRA_7 EXTRA_8</requiredExtras>
+    <rewards />
+    <cinematicPartCamera>
+      <Item>WHEEL_REAR_LEFT_CAMERA</Item>
+      <Item>WHEEL_REAR_RIGHT_CAMERA</Item>
+    </cinematicPartCamera>
+    <NmBraceOverrideSet>Bike</NmBraceOverrideSet>
+    <buoyancySphereOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </buoyancySphereOffset>
+    <buoyancySphereSizeScale value="1.000000">
+
+    </buoyancySphereSizeScale>
+    <pOverrideRagdollThreshold type="NULL">
+
+    </pOverrideRagdollThreshold>
+    <firstPersonDrivebyData>
+      <Item>BIKE_AKUMA_FRONT</Item>
+    </firstPersonDrivebyData>
+  </Item>
+  <Item>
+    <modelName>wrcarruagem</modelName>
+    <txdName>wrcarruagem</txdName>
+    <handlingId>zentorno</handlingId>
+    <gameName>wrcarruagem</gameName>
+    <vehicleMakeName>wrcarruagem</vehicleMakeName>
+    <expressionDictName>wrcarruagem</expressionDictName>
+    <expressionName>null</expressionName>
+    <animConvRoofDictName>null</animConvRoofDictName>
+    <animConvRoofName>null</animConvRoofName>
+    <animConvRoofWindowsAffected />
+    <ptfxAssetName>null</ptfxAssetName>
+    <audioNameHash>tractor</audioNameHash>
+    <layout>LAYOUT_WRCARRUAGEM</layout>
+    <coverBoundOffsets>FACTION3_COVER_OFFSET_INFO</coverBoundOffsets>
+    <explosionInfo>EXPLOSION_INFO_DEFAULT</explosionInfo>
+    <scenarioLayout />
+    <cameraName>DEFAULT_FOLLOW_VEHICLE_CAMERA</cameraName>
+    <aimCameraName>MID_BOX_VEHICLE_AIM_CAMERA</aimCameraName>
+    <bonnetCameraName>VEHICLE_BONNET_CAMERA_STANDARD_LONG</bonnetCameraName>
+    <povCameraName>DEFAULT_POV_CAMERA</povCameraName>
+    <FirstPersonDriveByIKOffset x="0.000000" y="-0.060000" z="-0.020000">
+
+    </FirstPersonDriveByIKOffset>
+    <FirstPersonDriveByUnarmedIKOffset x="0.000000" y="-0.025000" z="0.000000">
+
+    </FirstPersonDriveByUnarmedIKOffset>
+    <FirstPersonProjectileDriveByIKOffset x="0.000000" y="-0.100000" z="0.030000">
+
+    </FirstPersonProjectileDriveByIKOffset>
+    <FirstPersonProjectileDriveByPassengerIKOffset x="0.000000" y="-0.100000" z="0.030000">
+
+    </FirstPersonProjectileDriveByPassengerIKOffset>
+    <FirstPersonProjectileDriveByRearLeftIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonProjectileDriveByRearLeftIKOffset>
+    <FirstPersonProjectileDriveByRearRightIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonProjectileDriveByRearRightIKOffset>
+    <FirstPersonDriveByLeftPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByLeftPassengerIKOffset>
+    <FirstPersonDriveByRightPassengerIKOffset x="0.000000" y="-0.060000" z="-0.020000">
+
+    </FirstPersonDriveByRightPassengerIKOffset>
+    <FirstPersonDriveByRightRearPassengerIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByRightRearPassengerIKOffset>
+    <FirstPersonDriveByLeftPassengerUnarmedIKOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </FirstPersonDriveByLeftPassengerUnarmedIKOffset>
+    <FirstPersonDriveByRightPassengerUnarmedIKOffset x="0.000000" y="-0.035000" z="0.000000">
+
+    </FirstPersonDriveByRightPassengerUnarmedIKOffset>
+    <FirstPersonMobilePhoneOffset x="0.100000" y="0.210000" z="0.530000">
+
+    </FirstPersonMobilePhoneOffset>
+    <FirstPersonPassengerMobilePhoneOffset x="0.135000" y="0.165000" z="0.425000">
+
+    </FirstPersonPassengerMobilePhoneOffset>
+    <PovCameraOffset x="0.000000" y="-0.175000" z="0.600000">
+
+    </PovCameraOffset>
+    <PovCameraVerticalAdjustmentForRollCage value="0.000000">
+
+    </PovCameraVerticalAdjustmentForRollCage>
+    <PovPassengerCameraOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </PovPassengerCameraOffset>
+    <PovRearPassengerCameraOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </PovRearPassengerCameraOffset>
+    <vfxInfoName>VFXVEHICLEINFO_CAR_GENERIC</vfxInfoName>
+    <shouldUseCinematicViewMode value="true">
+
+    </shouldUseCinematicViewMode>
+    <shouldCameraTransitionOnClimbUpDown value="false">
+
+    </shouldCameraTransitionOnClimbUpDown>
+    <shouldCameraIgnoreExiting value="false">
+
+    </shouldCameraIgnoreExiting>
+    <AllowPretendOccupants value="true">
+
+    </AllowPretendOccupants>
+    <AllowJoyriding value="true">
+
+    </AllowJoyriding>
+    <AllowSundayDriving value="true">
+
+    </AllowSundayDriving>
+    <AllowBodyColorMapping value="true">
+
+    </AllowBodyColorMapping>
+    <wheelScale value="0.010200">
+
+    </wheelScale>
+    <wheelScaleRear value="0.010200">
+
+    </wheelScaleRear>
+    <dirtLevelMin value="0.000000">
+
+    </dirtLevelMin>
+    <dirtLevelMax value="0.450000">
+
+    </dirtLevelMax>
+    <envEffScaleMin value="0.000000">
+
+    </envEffScaleMin>
+    <envEffScaleMax value="1.000000">
+
+    </envEffScaleMax>
+    <envEffScaleMin2 value="0.000000">
+
+    </envEffScaleMin2>
+    <envEffScaleMax2 value="1.000000">
+
+    </envEffScaleMax2>
+    <damageMapScale value="0.600000">
+
+    </damageMapScale>
+    <damageOffsetScale value="0.600000">
+
+    </damageOffsetScale>
+    <diffuseTint value="0x00FFFFFF">
+
+    </diffuseTint>
+    <steerWheelMult value="0.500000">
+
+    </steerWheelMult>
+    <HDTextureDist value="5.000000">
+
+    </HDTextureDist>
+    <lodDistances content="float_array">
+500.000000
+        500.000000
+        500.000000
+        500.000000
+        500.000000
+        500.000000    </lodDistances>
+    <minSeatHeight value="0.844">
+
+    </minSeatHeight>
+    <identicalModelSpawnDistance value="20">
+
+    </identicalModelSpawnDistance>
+    <maxNumOfSameColor value="1">
+
+    </maxNumOfSameColor>
+    <defaultBodyHealth value="1000.000000">
+
+    </defaultBodyHealth>
+    <pretendOccupantsScale value="1.000000">
+
+    </pretendOccupantsScale>
+    <visibleSpawnDistScale value="1.000000">
+
+    </visibleSpawnDistScale>
+    <trackerPathWidth value="2.000000">
+
+    </trackerPathWidth>
+    <weaponForceMult value="1.000000">
+
+    </weaponForceMult>
+    <frequency value="30">
+
+    </frequency>
+    <swankness>SWANKNESS_4</swankness>
+    <maxNum value="10">
+
+    </maxNum>
+    <flags>FLAG_SPORTS FLAG_PARKING_SENSORS FLAG_NO_HEAVY_BRAKE_ANIMATION FLAG_HAS_LIVERY
+        FLAG_LAW_ENFORCEMENT FLAG_EXTRAS_ALL FLAG_EXTRAS_STRONG
+        FLAG_IS_OFFROAD_VEHICLE FLAG_IS_BULKY FLAG_HAS_INTERIOR_EXTRAS</flags>
+    <type>VEHICLE_TYPE_CAR</type>
+    <plateType>VPT_FRONT_AND_BACK_PLATES</plateType>
+    <dashboardType>VDT_RACE</dashboardType>
+    <vehicleClass>VC_SPORT</vehicleClass>
+    <wheelType>VWT_MUSCLE</wheelType>
+    <trailers>
+      <Item>boattrailer</Item>
+      <Item>trailersmall</Item>
+      <Item>trailercar</Item>
+      <Item>enclosedgoose</Item>
+      <Item>thauler</Item>
+      <Item>cgooselb</Item>
+    </trailers>
+    <additionalTrailers />
+    <drivers />
+    <extraIncludes />
+    <doorsWithCollisionWhenClosed />
+    <driveableDoors />
+    <bumpersNeedToCollideWithMap value="false">
+
+    </bumpersNeedToCollideWithMap>
+    <needsRopeTexture value="false">
+
+    </needsRopeTexture>
+    <requiredExtras />
+    <rewards />
+    <cinematicPartCamera>
+      <Item>WHEEL_FRONT_RIGHT_CAMERA</Item>
+      <Item>WHEEL_FRONT_LEFT_CAMERA</Item>
+      <Item>WHEEL_REAR_RIGHT_CAMERA</Item>
+      <Item>WHEEL_REAR_LEFT_CAMERA</Item>
+    </cinematicPartCamera>
+    <NmBraceOverrideSet />
+    <buoyancySphereOffset x="0.000000" y="0.000000" z="0.000000">
+
+    </buoyancySphereOffset>
+    <buoyancySphereSizeScale value="1.000000">
+
+    </buoyancySphereSizeScale>
+    <pOverrideRagdollThreshold type="NULL">
+
+    </pOverrideRagdollThreshold>
+    <firstPersonDrivebyData>
+      <Item>LOW_BUCCANEER_FRONT_LEFT</Item>
+      <Item>LOW_BUCCANEER_FRONT_RIGHT</Item>
+    </firstPersonDrivebyData>
+  </Item>
+</InitDatas>
+<txdRelationships>
+
+</txdRelationships>

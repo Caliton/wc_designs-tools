@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfo__InitDataList>
+  <residentTxd>vehshare</residentTxd>
+  <residentAnims/>
+  <InitDatas>
+    <Item>
+      <modelName>WRharrypotterVI</modelName>
+      <!-- Item 1 - outros dados omitidos para brevidade -->
+    </Item>
+    <Item>
+      <modelName>WRharrypotterIII</modelName>
+      <!-- Item 2 - outros dados omitidos para brevidade -->
+    </Item>
+    <Item>
+      <modelName>WRharrypotterII</modelName>
+      <!-- Item 3 - outros dados omitidos para brevidade -->
+    </Item>
+    <Item>
+      <modelName>WRharrypotterI</modelName>
+      <!-- Item 4 - outros dados omitidos para brevidade -->
+    </Item>
+    <Item>
+      <modelName>wrcarruagem</modelName>
+      <!-- Item 5 - outros dados omitidos para brevidade -->
+    </Item>
+  </InitDatas>
+  <txdRelationships>
+  </txdRelationships>
+</CVehicleModelInfo__InitDataList>
