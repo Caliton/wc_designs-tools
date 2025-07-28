@@ -18,12 +18,15 @@
       <div class="flex justify-center mb-12">
         <div class="flex items-center space-x-4">
           <div class="flex items-center">
-            <div :class="[
-              'w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300',
-              currentStep >= 1 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-500'
-            ]">
+            <button 
+              @click="goToStep(1)"
+              :class="[
+                'w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 cursor-pointer hover:scale-110',
+                currentStep >= 1 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-500 hover:bg-gray-300'
+              ]"
+            >
               1
-            </div>
+            </button>
             <span :class="[
               'ml-2 text-sm font-medium transition-colors duration-300',
               currentStep >= 1 ? 'text-emerald-600' : 'text-gray-500'
@@ -34,12 +37,17 @@
             currentStep >= 2 ? 'bg-emerald-600' : 'bg-gray-200'
           ]"></div>
           <div class="flex items-center">
-            <div :class="[
-              'w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300',
-              currentStep >= 2 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-500'
-            ]">
+            <button 
+              @click="goToStep(2)"
+              :disabled="files.length === 0"
+              :class="[
+                'w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 cursor-pointer hover:scale-110',
+                currentStep >= 2 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-500 hover:bg-gray-300',
+                files.length === 0 ? 'opacity-50 cursor-not-allowed' : ''
+              ]"
+            >
               2
-            </div>
+            </button>
             <span :class="[
               'ml-2 text-sm font-medium transition-colors duration-300',
               currentStep >= 2 ? 'text-emerald-600' : 'text-gray-500'
@@ -50,12 +58,17 @@
             currentStep >= 3 ? 'bg-emerald-600' : 'bg-gray-200'
           ]"></div>
           <div class="flex items-center">
-            <div :class="[
-              'w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300',
-              currentStep >= 3 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-500'
-            ]">
+            <button 
+              @click="goToStep(3)"
+              :disabled="!processedFile"
+              :class="[
+                'w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 cursor-pointer hover:scale-110',
+                currentStep >= 3 ? 'bg-emerald-600 text-white' : 'bg-gray-200 text-gray-500 hover:bg-gray-300',
+                !processedFile ? 'opacity-50 cursor-not-allowed' : ''
+              ]"
+            >
               3
-            </div>
+            </button>
             <span :class="[
               'ml-2 text-sm font-medium transition-colors duration-300',
               currentStep >= 3 ? 'text-emerald-600' : 'text-gray-500'
@@ -64,243 +77,263 @@
         </div>
       </div>
 
-      <!-- Upload Area -->
-      <div class="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 mb-8">
-        <div class="flex items-center justify-between mb-8">
-          <h2 class="text-2xl font-semibold text-gray-900 flex items-center">
-            <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center mr-3">
-              <Upload class="w-5 h-5 text-emerald-600" />
-            </div>
-            Upload de Arquivos
-          </h2>
-          <div class="text-gray-500 text-sm">
-            Passo 1 de 3
-          </div>
-        </div>
-        
-        <!-- Drag & Drop Zone -->
+      <!-- Carousel Container -->
+      <div class="relative overflow-hidden bg-white rounded-2xl shadow-lg">
         <div 
-          @drop="handleDrop"
-          @dragover.prevent
-          @dragenter.prevent
-          :class="[
-            'border-2 border-dashed rounded-xl p-12 text-center transition-all duration-300',
-            isDragging ? 'border-emerald-400 bg-emerald-50' : 'border-gray-300 hover:border-emerald-400 hover:bg-gray-50'
-          ]"
-          @dragenter="isDragging = true"
-          @dragleave="isDragging = false"
+          class="flex transition-transform duration-500 ease-in-out"
+          :style="{ transform: `translateX(-${(currentStep - 1) * 100}%)` }"
         >
-          <div class="flex flex-col items-center">
-            <div :class="[
-              'w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-all duration-300',
-              isDragging ? 'bg-emerald-100 text-emerald-600' : 'bg-gray-100 text-gray-500'
-            ]">
-              <FileText class="w-8 h-8" />
+
+          <!-- Step 1: Upload Area -->
+          <div class="w-full flex-shrink-0 p-8">
+            <div class="text-center mb-8">
+              <Upload class="w-12 h-12 text-emerald-600 mx-auto mb-4" />
+              <h2 class="text-2xl font-bold text-gray-900 mb-2">Selecione os arquivos .meta</h2>
+              <p class="text-gray-600">Arraste e solte ou clique para selecionar múltiplos arquivos .meta</p>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">
-              {{ isDragging ? 'Solte os arquivos aqui!' : 'Arraste arquivos .meta aqui' }}
-            </h3>
-            <p class="text-gray-600 mb-8">
-              ou clique para selecionar arquivos
-            </p>
+        
+            <div 
+              @drop="handleDrop"
+              @dragover.prevent
+              @dragenter.prevent
+              class="border-2 border-dashed border-gray-300 rounded-xl p-12 text-center hover:border-emerald-400 transition-colors duration-300 cursor-pointer"
+              @click="$refs.fileInput.click()"
+            >
+              <div class="space-y-4">
+                <div class="text-gray-500">
+                  <FileText class="w-16 h-16 mx-auto mb-4 opacity-50" />
+                  <p class="text-lg font-medium">Arraste arquivos .meta aqui</p>
+                  <p class="text-sm">ou clique para selecionar</p>
+                </div>
+              </div>
+            </div>
+
             <input
               ref="fileInput"
               type="file"
               multiple
-              accept=".meta,.xml"
+              accept=".meta"
               @change="handleFileSelect"
               class="hidden"
             />
-            <button
-              @click="fileInput?.click()"
-              class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 flex items-center"
-            >
-              <Upload class="w-4 h-4 mr-2" />
-              Selecionar Arquivos
-            </button>
-          </div>
-        </div>
 
-        <!-- File List -->
-        <div v-if="files.length > 0" class="mt-8">
-          <div class="flex items-center justify-between mb-6">
-            <h3 class="text-xl font-semibold text-gray-900 flex items-center">
-              <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center mr-3">
-                <span class="text-emerald-600 font-semibold text-sm">{{ files.length }}</span>
-              </div>
-              Arquivos Selecionados
-            </h3>
-            <button
-              @click="clearFiles"
-              class="text-gray-500 hover:text-red-600 transition-colors duration-200 flex items-center text-sm"
-            >
-              <Trash2 class="w-4 h-4 mr-1" />
-              Limpar Todos
-            </button>
-          </div>
-          <div class="grid gap-3">
-            <div 
-              v-for="(file, index) in files" 
-              :key="index"
-              class="group bg-gray-50 border border-gray-200 rounded-xl p-4 transition-all duration-200 hover:bg-gray-100 hover:border-emerald-300"
-            >
-              <div class="flex items-center justify-between">
-                <div class="flex items-center flex-1">
-                  <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mr-3">
-                    <FileText class="w-5 h-5 text-emerald-600" />
-                  </div>
-                  <div class="flex-1">
-                    <div class="font-medium text-gray-900">{{ file.name }}</div>
-                    <div class="text-gray-500 text-sm flex items-center mt-1">
-                      <span class="bg-gray-200 px-2 py-1 rounded text-xs mr-2">{{ formatFileSize(file.size) }}</span>
-                      <span class="text-emerald-600 text-xs">✓ Válido</span>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  @click="removeFile(index)"
-                  class="w-8 h-8 bg-red-50 hover:bg-red-100 text-red-500 hover:text-red-600 rounded-lg transition-all duration-200 flex items-center justify-center"
+            <!-- File List -->
+            <div v-if="files.length > 0" class="mt-8">
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Arquivos selecionados ({{ files.length }})</h3>
+              <div class="space-y-3 max-h-64 overflow-y-auto">
+                <div 
+                  v-for="(file, index) in files" 
+                  :key="index"
+                  class="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-200"
                 >
-                  <X class="w-4 h-4" />
+                  <div class="flex items-center space-x-3">
+                    <FileText class="w-5 h-5 text-emerald-600" />
+                    <span class="text-sm font-medium text-gray-900">{{ file.name }}</span>
+                    <span class="text-xs text-gray-500">({{ formatFileSize(file.size) }})</span>
+                  </div>
+                  <button 
+                    @click="removeFile(index)"
+                    class="text-red-500 hover:text-red-700 transition-colors duration-200"
+                  >
+                    <X class="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+
+              <div class="mt-6 flex justify-between">
+                <button
+                  @click="clearFiles"
+                  class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-all duration-300"
+                >
+                  <X class="w-4 h-4 mr-2" />
+                  Limpar Tudo
+                </button>
+                <button
+                  @click="goToStep(2)"
+                  class="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Próximo
+                  <ChevronRight class="w-5 h-5 ml-2" />
                 </button>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Processing Section -->
-      <div v-if="files.length > 0" class="bg-white border border-gray-200 rounded-2xl shadow-sm p-8 mb-8 transition-all duration-300">
-        <div class="flex items-center justify-between mb-8">
-          <h2 class="text-2xl font-semibold text-gray-900 flex items-center">
-            <div class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center mr-3">
-              <Settings class="w-5 h-5 text-emerald-600" />
+          <!-- Step 2: Processing Section -->
+          <div class="w-full flex-shrink-0 p-8">
+            <div class="text-center mb-8">
+              <Settings class="w-12 h-12 text-emerald-600 mx-auto mb-4" :class="{ 'animate-spin': isProcessing }" />
+              <h2 class="text-2xl font-bold text-gray-900 mb-2">Processamento</h2>
+              <p class="text-gray-600">Unificando arquivos .meta em um único XML</p>
             </div>
-            Processamento
-          </h2>
-          <div class="text-gray-500 text-sm">
-            Passo 2 de 3
-          </div>
-        </div>
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-          <button
-            @click="processFiles"
-            :disabled="isProcessing || files.length < 2"
-            class="bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 flex items-center justify-center"
-          >
-            <template v-if="isProcessing">
-              <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-              Processando...
-            </template>
-            <template v-else>
-              <Zap class="w-4 h-4 mr-2" />
-              Unificar Arquivos
-            </template>
-          </button>
-          
-          <div class="bg-slate-700/50 rounded-2xl p-6 border border-slate-600">
-            <div class="text-center">
-              <div class="text-2xl font-bold text-white mb-2">{{ files.length }}</div>
-              <div class="text-slate-400 text-sm">Arquivos Carregados</div>
-              <div class="mt-4 text-xs text-slate-500">
-                {{ files.length >= 2 ? '✓ Pronto para unificar' : 'Mínimo 2 arquivos necessários' }}
+            <div class="space-y-6">
+              <!-- Files Summary -->
+              <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Resumo dos Arquivos</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-emerald-600">{{ files.length }}</div>
+                    <div class="text-sm text-gray-600">Arquivos .meta</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-blue-600">{{ totalSize }}</div>
+                    <div class="text-sm text-gray-600">Tamanho Total</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-purple-600">1</div>
+                    <div class="text-sm text-gray-600">Arquivo XML Final</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Processing Status -->
+              <div v-if="isProcessing" class="space-y-4">
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+                    <span class="text-blue-800 font-medium">Processando arquivos...</span>
+                  </div>
+                  <div class="mt-3 bg-blue-200 rounded-full h-2">
+                    <div class="bg-blue-600 h-2 rounded-full transition-all duration-300" :style="{ width: progress + '%' }"></div>
+                  </div>
+                  <p class="text-sm text-blue-600 mt-2">{{ progress }}% concluído</p>
+                </div>
+              </div>
+
+              <div v-else-if="processedFile" class="space-y-4">
+                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div class="flex items-center space-x-3">
+                    <CheckCircle class="w-5 h-5 text-green-600" />
+                    <span class="text-green-800 font-medium">Processamento concluído!</span>
+                  </div>
+                  <p class="text-sm text-green-600 mt-2">{{ files.length }} arquivos foram unificados com sucesso</p>
+                </div>
+              </div>
+
+              <div v-else>
+                <div class="text-center py-8">
+                  <button
+                    @click="processFiles"
+                    :disabled="files.length === 0"
+                    class="inline-flex items-center px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105"
+                  >
+                    <Zap class="w-6 h-6 mr-3" />
+                    Iniciar Processamento
+                  </button>
+                </div>
+              </div>
+
+              <div v-if="error" class="bg-red-50 border border-red-200 rounded-lg p-4">
+                <div class="flex items-center space-x-3">
+                  <AlertCircle class="w-5 h-5 text-red-600" />
+                  <span class="text-red-800 font-medium">Erro no processamento</span>
+                </div>
+                <p class="text-sm text-red-600 mt-2">{{ error }}</p>
+              </div>
+
+              <!-- Navigation -->
+              <div class="flex justify-between pt-6">
+                <button
+                  @click="goToStep(1)"
+                  class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-all duration-300"
+                >
+                  <ChevronLeft class="w-4 h-4 mr-2" />
+                  Voltar
+                </button>
+                <button
+                  @click="goToStep(3)"
+                  :disabled="!processedFile"
+                  class="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105"
+                >
+                  Próximo
+                  <ChevronRight class="w-5 h-5 ml-2" />
+                </button>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Progress Bar -->
-        <div v-if="isProcessing" class="mb-8">
-          <div class="bg-slate-700/50 rounded-2xl p-6 border border-slate-600">
-            <div class="flex justify-between items-center mb-4">
-              <span class="text-white font-bold text-lg">Progresso da Unificação</span>
-              <span class="text-cyan-400 font-bold text-xl">{{ progress }}%</span>
+          <!-- Step 3: Download Section -->
+          <div class="w-full flex-shrink-0 p-8">
+            <div class="text-center mb-8">
+              <Download class="w-12 h-12 text-emerald-600 mx-auto mb-4" />
+              <h2 class="text-2xl font-bold text-gray-900 mb-2">Download</h2>
+              <p class="text-gray-600">Seu arquivo XML unificado está pronto para download</p>
             </div>
-            <div class="relative w-full bg-slate-600 rounded-full h-4 overflow-hidden">
-              <div 
-                class="absolute top-0 left-0 h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full transition-all duration-500 ease-out"
-                :style="{ width: progress + '%' }"
+        
+            <div v-if="processedFile" class="space-y-6">
+              <!-- Success Message -->
+              <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                  <CheckCircle class="w-8 h-8 text-green-600" />
+                  <span class="text-xl font-semibold text-green-900">Processamento Concluído!</span>
+                </div>
+                <p class="text-center text-green-700">Todos os arquivos .meta foram unificados com sucesso</p>
+              </div>
+
+              <!-- File Info -->
+              <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-emerald-100 p-3 rounded-lg">
+                      <FileText class="w-8 h-8 text-emerald-600" />
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900">vehicles_unified.xml</h3>
+                      <p class="text-sm text-gray-600">Arquivo XML unificado</p>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-2xl font-bold text-emerald-600">{{ files.length }}</div>
+                    <div class="text-sm text-gray-600">veículos processados</div>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Download Actions -->
+              <div class="text-center space-y-4">
+                <button
+                  @click="downloadFile"
+                  class="inline-flex items-center px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  <Download class="w-6 h-6 mr-3" />
+                  Baixar Arquivo XML
+                </button>
+                
+                <div class="flex justify-center space-x-4">
+                  <button
+                    @click="goToStep(2)"
+                    class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-300 transition-all duration-300"
+                  >
+                    <ChevronLeft class="w-4 h-4 mr-2" />
+                    Voltar
+                  </button>
+                  <button
+                    @click="resetProcess"
+                    class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-300"
+                  >
+                    <RotateCcw class="w-4 h-4 mr-2" />
+                    Novo Processamento
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div v-else class="text-center py-12">
+              <div class="text-gray-400 mb-4">
+                <FileText class="w-16 h-16 mx-auto opacity-50" />
+              </div>
+              <h3 class="text-lg font-medium text-gray-500 mb-2">Nenhum arquivo processado</h3>
+              <p class="text-gray-400 mb-6">Complete as etapas anteriores para gerar o arquivo XML</p>
+              <button
+                @click="goToStep(1)"
+                class="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all duration-300"
               >
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-              </div>
-            </div>
-            <div class="mt-2 text-slate-400 text-sm text-center">
-              Processando arquivos XML...
+                <ChevronLeft class="w-5 h-5 mr-2" />
+                Voltar ao Início
+              </button>
             </div>
           </div>
-        </div>
-
-        <!-- Processing Logs -->
-        <div v-if="logs.length > 0" class="bg-slate-700/30 backdrop-blur-sm border border-slate-600 rounded-2xl p-6">
-          <div class="flex items-center mb-4">
-            <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3">
-              <Settings class="w-4 h-4 text-white" />
-            </div>
-            <h4 class="font-bold text-white text-lg">Logs de Processamento</h4>
-          </div>
-          <div class="bg-slate-900/50 rounded-xl p-4 max-h-40 overflow-y-auto custom-scrollbar">
-            <div class="space-y-2">
-              <div 
-                v-for="(log, index) in logs" 
-                :key="index"
-                class="text-sm text-slate-300 font-mono flex items-center animate-fade-in"
-              >
-                <span class="text-cyan-400 mr-2">▶</span>
-                {{ log }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Download Section -->
-      <div v-if="processedFile" class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl shadow-2xl p-8 transition-all duration-300">
-        <div class="flex items-center justify-between mb-8">
-          <h2 class="text-3xl font-bold text-white flex items-center">
-            <div class="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mr-4">
-              <Download class="w-6 h-6 text-white" />
-            </div>
-            Download Concluído
-          </h2>
-          <div class="text-slate-400 text-sm">
-            Passo 3 de 3
-          </div>
-        </div>
-        
-        <div class="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-2xl p-6 mb-8">
-          <div class="flex items-center">
-            <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mr-6">
-              <CheckCircle class="w-8 h-8 text-white" />
-            </div>
-            <div class="flex-1">
-              <h3 class="text-2xl font-bold text-white mb-2">
-                🎉 Arquivo unificado criado com sucesso!
-              </h3>
-              <div class="flex items-center space-x-4 text-emerald-400">
-                <span class="bg-emerald-500/20 px-3 py-1 rounded-lg font-mono text-sm">{{ processedFile.name }}</span>
-                <span class="bg-slate-700 px-3 py-1 rounded-lg text-sm">{{ formatFileSize(processedFile.size) }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <button
-            @click="downloadFile"
-            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 flex items-center justify-center"
-          >
-            <Download class="w-4 h-4 mr-2" />
-            Baixar Arquivo Unificado
-          </button>
-          
-          <button
-            @click="resetProcess"
-            class="bg-slate-700/50 hover:bg-slate-600 border border-slate-600 hover:border-slate-500 text-white px-8 py-6 rounded-2xl font-bold text-lg transition-all duration-300 flex items-center justify-center"
-          >
-            <Zap class="w-6 h-6 mr-3" />
-            Novo Processamento
-          </button>
         </div>
       </div>
     </div>
@@ -308,10 +341,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 import { 
   Upload, FileText, X, Settings, Zap, Loader2, 
-  Trash2, Download, CheckCircle 
+  Trash2, Download, CheckCircle, ChevronLeft,
+  ChevronRight, RotateCcw, AlertCircle 
 } from 'lucide-vue-next'
 import { useXmlProcessor } from '@/composables/useXmlProcessor'
 
@@ -323,6 +357,20 @@ const progress = ref(0)
 const logs = ref<string[]>([])
 const processedFile = ref<{ name: string; content: string; size: number } | null>(null)
 const currentStep = ref(1)
+const error = ref('')
+
+// Computed property for total file size
+const totalSize = computed(() => {
+  const total = files.value.reduce((sum, file) => sum + file.size, 0)
+  return formatFileSize(total)
+})
+
+// Carousel navigation functions
+const goToStep = (step: number) => {
+  if (step >= 1 && step <= 3) {
+    currentStep.value = step
+  }
+}
 
 const { processXmlFiles } = useXmlProcessor()
 
@@ -380,6 +428,7 @@ const resetProcess = () => {
   progress.value = 0
   currentStep.value = 1
   isProcessing.value = false
+  error.value = ''
   addLog('Processo reiniciado - Pronto para novos arquivos')
 }
 
